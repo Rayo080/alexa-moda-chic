@@ -94,6 +94,15 @@
 
   body {
     @apply bg-background text-foreground font-body antialiased;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -651,3 +660,170 @@
     width: calc(50% - 20px);
   }
 }
+
+/* Vestidos / Product grid styles (luxury boutique aesthetic, full width) */
+.productos-container {
+  width: 100%;
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+  width: 100%;
+}
+
+.product-card {
+  position: relative;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card img {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  display: block;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+  height: auto;
+}
+
+.product-info {
+  text-align: left;
+  padding: 10px 5px;
+}
+
+.product-info h3 {
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0;
+  color: #222;
+}
+
+.precio {
+  font-weight: 700;
+  color: #000;
+  font-size: 13px;
+  margin-top: 3px;
+}
+
+.badge-nuevo {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: white;
+  padding: 2px 6px;
+  font-size: 9px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #5a3a34;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border-radius: 2px;
+}
+
+/* Floating filter button */
+.boton-filtrar-flotante {
+  display: none !important;
+}
+
+@media (min-width: 1024px) {
+  .productos-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+  
+  .product-info {
+    padding: 10px 0;
+  }
+  
+  .product-info h3 {
+    font-size: 15px;
+    letter-spacing: 1px;
+  }
+  
+  .precio {
+    font-size: 14px;
+  }
+  
+  .product-card img {
+    aspect-ratio: 3 / 4;
+  }
+}
+
+/* Page background and filter minimal styles */
+.vestidos-page {
+  background-color: #F9F8F6;
+}
+
+.filters-bar { display: none; }
+.filter-btn { display: none; }
+
+/* Remove global image borders on product areas */
+.product-card img { border: none !important; box-shadow: none !important; }
+
+/* Filtros - Cuadrados independientes boutique style */
+.contenedor-filtros-boutique {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 20px 5%;
+  background: transparent;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.filtro-boton {
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+  padding: 8px 16px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  min-width: 100px;
+  height: 38px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+  font-weight: 400;
+  color: #333;
+}
+
+.filtro-boton.rebajas {
+  color: #b08d57;
+  font-weight: 600;
+}
+
+.filtro-boton:last-child {
+  min-width: 38px;
+  padding: 8px 8px;
+}
+
+.flecha {
+  margin-left: 8px;
+  border: solid #333;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 2px;
+  transform: rotate(45deg);
+}
+
+@media (max-width: 768px) {
+  .filtro-boton {
+    flex-grow: 1;
+  }
+}
+
+

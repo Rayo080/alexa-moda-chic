@@ -50,7 +50,7 @@ const HeroSection = () => {
             className="flex flex-col sm:flex-row gap-4 w-full botones-container"
           >
             <a
-              href="/vestidos-fiesta.html"
+              href="/vestidos"
               className="btn-categoria inline-flex items-center justify-center font-bold text-base rounded-full hover:scale-105 transition-transform duration-300 shadow-md flex-1 text-center"
             >
               Vestidos de Fiesta

@@ -40,3 +40,127 @@
 .read-the-docs {
   color: #888;
 }
+/* Contenedor General de Productos */
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 40px;
+  padding: 20px;
+  background-color: #fcfaf7; /* Color crema suave de fondo */
+}
+
+/* Estilos para Tarjetas de Vestidos - Diseño Boutique */
+.producto-card {
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  max-width: 100%;
+}
+
+/* Imagen y etiquetas */
+.imagen-container {
+  position: relative;
+  margin-bottom: 15px;
+  overflow: hidden;
+  transition: transform 0.4s ease;
+}
+
+.imagen-container:hover {
+  transform: scale(1.02);
+}
+
+.imagen-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* Etiquetas flotantes sobre la imagen */
+.etiquetas {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.tag-descuento {
+  background: #c5a059;
+  color: white;
+  padding: 4px 10px;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.tag-nuevo {
+  background: white;
+  color: black;
+  padding: 4px 10px;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Contenedor de información */
+.info-container {
+  padding: 0;
+}
+
+/* Título del producto */
+.producto-titulo {
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  margin: 10px 0;
+  color: #1a1a1a;
+  text-transform: uppercase;
+}
+
+/* Caja de precios */
+.precio-box {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 10px 0;
+  align-items: center;
+}
+
+.precio-actual {
+  font-weight: 600;
+  font-size: 16px;
+  color: #1a1a1a;
+}
+
+.precio-anterior {
+  text-decoration: line-through;
+  color: #a0a0a0;
+  font-size: 13px;
+}
+
+/* Círculos de colores */
+.colores-box {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.circulo-color {
+  width: 12px;
+  height: 12px;
+  border: 1px solid #e0e0e0;
+  display: inline-block;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.circulo-color:hover {
+  transform: scale(1.3);
+  border-color: #999;
+}
+
